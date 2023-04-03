@@ -25,7 +25,7 @@ export default function Alert({ error, onDismiss }: Props) {
         <span className='sr-only'>Инфо</span>
         <h3 className='text-lg font-medium text-red-900 dark:text-red-800'>Что-то пошло не так!</h3>
       </div>
-      <div className='mt-2 mb-4 text-sm text-red-900 dark:text-red-900 capitalize'>
+      <div className='mt-2 mb-4 text-sm text-red-900 dark:text-red-900'>
         {error ? 'Город не найден' : 'Ошибка'}
       </div>
       <div className='flex'>
