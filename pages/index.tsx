@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { ChangeEvent, useState, useEffect } from 'react'
-import Layout from '../components/Layout'
-import Banner from '../components/Banner'
-import Header from '../components/Header'
-import SearchBar from '../components/SearchBar'
-import Loader from '../components/Loader'
-import WeatherCard from '../components/WeatherCard'
-import Alert from '../components/Alert'
-import { weatherState } from '../types'
-import { useDebounce } from '../hooks/useDebounce'
-import GetStarted from '../components/GetStarted'
-import Footer from '../components/Footer'
+import Layout from '@/components/Layout'
+import Banner from '@/components/Banner'
+import Header from '@/components/Header'
+import SearchBar from '@/components/SearchBar'
+import Loader from '@/components/Loader'
+import WeatherCard from '@/components/WeatherCard'
+import Alert from '@/components/Alert'
+import { weatherState } from '@/types'
+import { useDebounce } from '@/hooks/useDebounce'
+import GetStarted from '@/components/GetStarted'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   const [query, setQuery] = useState('')
@@ -89,21 +89,17 @@ export default function Home() {
                 <div className='mt-8 flex gap-x-4 sm:justify-center'>
                   <Loader status={loader} />
 
-                  {query && weather && !loader && (
-                    <WeatherCard {...weather} />
-                  )}
+                  {query && weather && !loader && <WeatherCard {...weather} />}
 
-                  {query && !loader && error && 
-										<Alert error={error} onDismiss={onDismiss} />
-									}
+                  {query && !loader && error && <Alert error={error} onDismiss={onDismiss} />}
                 </div>
               </div>
             </div>
           </div>
         </main>
       </div>
-			<GetStarted/>
-			<Footer/>
+      <GetStarted />
+      <Footer />
     </Layout>
   )
 }

@@ -1,10 +1,15 @@
 import React from 'react'
-import { weatherState } from '../types'
-import prepareFahrenheit from '../utils/prepareFahrenheit'
-import prepareMph from '../utils/prepareMph'
+import { weatherState } from '../../types'
+import prepareFahrenheit from '../../utils/prepareFahrenheit'
+import prepareMph from '../../utils/prepareMph'
 
-
-export default function WeatherCard({ temperature, description, humidity, windSpeed, icon }: weatherState) {
+export default function WeatherCard({
+  temperature,
+  description,
+  humidity,
+  windSpeed,
+  icon,
+}: weatherState) {
   return (
     <div className='rounded overflow-hidden shadow-lg mt-4 bg-white p-8'>
       <div className='flex justify-between items-center mb-4'>
